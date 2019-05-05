@@ -12,6 +12,8 @@ const BlogPage = () => {
               title
               date
             }
+            html
+            timeToRead
           }
         }
       }
