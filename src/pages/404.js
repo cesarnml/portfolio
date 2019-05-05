@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Head from '../components/head'
 import Layout from '../components/layout'
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
     <Layout>
       <Head title="404" />
@@ -15,4 +15,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default NotFoundPage

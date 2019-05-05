@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-const About = () => {
+const AboutPage = () => {
   return (
     <Layout>
       <div>
@@ -18,4 +18,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutPage

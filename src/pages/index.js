@@ -1,17 +1,31 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
-const IndexPage = () => {
+import Img from 'gatsby-image'
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "grass.png" }) {
+      childImageSharp {
+        fixed(width: 1000) {
+          width
+          height
+          base64
+          src
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Head title="Web Dev" />
-      <div>
-        <h1>Hello.</h1>
-        <h2>
-          I'm Cesar, a full-stack developer, living in beautiful Santa Monica.
-        </h2>
-      </div>
+      <main>
+        <Img fixed={data.file.childImageSharp.fixed} />
+      </main>
     </Layout>
   )
 }

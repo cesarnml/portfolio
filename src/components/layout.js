@@ -1,19 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Header from './header'
 import Footer from './footer'
-import '../styles/index.scss'
-import layout from './layout.module.scss'
 
 const Layout = ({ children }) => {
   return (
-    <div className={layout.container}>
-      <div className={layout.content}>
+    <div>
+      <div>
         <Header />
         {children}
       </div>
       <Footer />
     </div>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

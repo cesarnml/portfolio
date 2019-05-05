@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <Layout>
       <div>
@@ -20,4 +20,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactPage

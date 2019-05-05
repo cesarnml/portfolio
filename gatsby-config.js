@@ -2,12 +2,24 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: 'Cesar Mejia',
-    author: 'Cesar Napoleon Mejia Leiva',
+    title: 'César Mejia',
+    author: 'César Mejia ',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `César Mejia`,
+        short_name: `César`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+      },
+    },
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -18,11 +30,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
       },
     },
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -38,5 +49,6 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-offline',
   ],
 }
