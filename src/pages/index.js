@@ -13,6 +13,7 @@ export const query = graphql`
           height
           base64
           src
+          srcSet
         }
       }
     }

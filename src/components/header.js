@@ -8,18 +8,49 @@ const Header = () => {
         <Link to="/">César Mejia</Link>
       </h1>
       <nav>
-        <ul>
+        <ul
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            outline: '1px solid red',
+            listStyle: 'none',
+          }}
+        >
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+                marginRight: '2rem',
+              }}
+              to="/about"
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+                marginRight: '2rem',
+              }}
+              to="/blog"
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+                marginRight: '2rem',
+              }}
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
