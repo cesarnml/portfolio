@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Header from './header'
 import Footer from './footer'
-import { Normalize } from 'styled-normalize'
+import { GlobalStyle } from '../styles/normalize'
 
 const Layout = ({ children }) => {
   return (
     <div>
       <div>
         <Header />
-        <Normalize />
+        <GlobalStyle />
         {children}
       </div>
       <Footer />
